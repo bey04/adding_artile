@@ -18,3 +18,15 @@ A simple blog platform that allows users to add and view articles.
    ```bash
    git clone https://github.com/bey04/blog_platform.git
    cd blog_platform
+
+### creation db
+CREATE DATABASE blog_db;
+
+USE blog_db;
+
+CREATE TABLE posts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
